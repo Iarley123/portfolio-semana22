@@ -1,0 +1,2 @@
+Pasta destinada a imagens e outros recursos do portfólio.
+Adicione seus arquivos aqui e referencie-os no index.html usando, por exemplo: assets/foto.jpg

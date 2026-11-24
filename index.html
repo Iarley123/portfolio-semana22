@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de José Iarley, estudante de Desenvolvimento de Sistemas.">
+  <title>Portfólio de José Iarley</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Navegação principal">
+      <a class="logo" href="#inicio" aria-label="Voltar ao início">Iarley<span>.</span></a>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Ativar tema claro" title="Alternar tema">
+          <span id="themeIcon" aria-hidden="true">☀</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero section" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow">Portfólio profissional</p>
+        <h1>Olá, eu sou<br><span>José Iarley.</span></h1>
+        <p class="intro">Estudante de Desenvolvimento de Sistemas, interessado em tecnologia, criação de sites e desenvolvimento de soluções digitais.</p>
+        <div class="actions">
+          <a class="button primary" href="#projetos">Ver projetos</a>
+          <a class="button secondary" href="#contato">Entrar em contato</a>
+        </div>
+      </div>
+      <aside class="profile-card">
+        <div class="avatar" aria-hidden="true">JI</div>
+        <h2>José Iarley</h2>
+        <p>Estudante de Desenvolvimento de Sistemas</p>
+        <span class="status"><span aria-hidden="true"></span> Em formação</span>
+      </aside>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="section-heading">
+        <p class="eyebrow">Conheça um pouco</p>
+        <h2>Sobre mim</h2>
+      </div>
+      <div class="about-box">
+        <p>Estou concluindo o ensino médio junto ao curso técnico de Desenvolvimento de Sistemas. Tenho interesse em programação, desenvolvimento web e aprendizado contínuo. Durante o curso, venho desenvolvendo atividades e projetos que me ajudam a praticar lógica de programação, criação de interfaces e organização de código.</p>
+        <p>Meu objetivo é continuar evoluindo na área de tecnologia e transformar ideias em projetos digitais úteis, acessíveis e bem organizados.</p>
+      </div>
+    </section>
+
+    <section class="section" id="projetos">
+      <div class="section-heading">
+        <p class="eyebrow">O que estou desenvolvendo</p>
+        <h2>Projetos em destaque</h2>
+        <p>Alguns projetos acadêmicos e estudos realizados durante o curso.</p>
+      </div>
+
+      <div class="filter-bar" aria-label="Filtrar projetos">
+        <button class="filter-button active" type="button" data-filter="todos" aria-pressed="true">Todos</button>
+        <button class="filter-button" type="button" data-filter="web" aria-pressed="false">Desenvolvimento web</button>
+        <button class="filter-button" type="button" data-filter="academico" aria-pressed="false">Acadêmicos</button>
+      </div>
+
+      <div class="projects" id="projectList">
+        <article class="project" data-category="academico">
+          <span class="number">PROJETO 01</span>
+          <h3>SafeWay</h3>
+          <p>Projeto de TCC voltado à mobilidade urbana em Osasco, com a proposta de ajudar cidadãos a encontrar rotas de ônibus para seus deslocamentos.</p>
+          <span class="tag">TCC · Mobilidade urbana</span>
+        </article>
+        <article class="project" data-category="web">
+          <span class="number">PROJETO 02</span>
+          <h3>Portfólio web</h3>
+          <p>Site responsivo desenvolvido para apresentar minha trajetória, habilidades e projetos utilizando tecnologias de desenvolvimento web.</p>
+          <span class="tag">HTML · CSS · JavaScript</span>
+        </article>
+        <article class="project" data-category="academico">
+          <span class="number">PROJETO 03</span>
+          <h3>Estudos de programação</h3>
+          <p>Exercícios e pequenos programas desenvolvidos durante o curso técnico para praticar lógica, programação e resolução de problemas.</p>
+          <span class="tag">Lógica · Python</span>
+        </article>
+      </div>
+      <p class="filter-feedback" id="filterFeedback" aria-live="polite"></p>
+    </section>
+
+    <section class="section" id="repositorios">
+      <div class="section-heading">
+        <p class="eyebrow">Integração com GitHub</p>
+        <h2>Meus repositórios</h2>
+        <p>Digite seu nome de usuário do GitHub para consultar os repositórios públicos pela API.</p>
+      </div>
+      <form class="github-form" id="githubForm">
+        <label for="githubUser">Usuário do GitHub</label>
+        <div class="github-input-row">
+          <input id="githubUser" name="githubUser" type="text" placeholder="Ex.: octocat" autocomplete="off" required>
+          <button class="button primary" type="submit" id="githubButton">Buscar</button>
+        </div>
+      </form>
+      <p class="api-message" id="apiMessage" role="status" aria-live="polite">Informe seu usuário para carregar seus repositórios públicos.</p>
+      <div class="repo-grid" id="repoList"></div>
+    </section>
+
+    <section class="section" id="habilidades">
+      <div class="section-heading">
+        <p class="eyebrow">Tecnologias e conhecimentos</p>
+        <h2>Habilidades</h2>
+      </div>
+      <div class="skills">
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">JavaScript básico</span>
+        <span class="skill">Python</span>
+        <span class="skill">SQL</span>
+        <span class="skill">Git e GitHub</span>
+        <span class="skill">Inglês avançado</span>
+      </div>
+    </section>
+
+    <section class="section" id="contato">
+      <div class="contact-box">
+        <p class="eyebrow">Vamos conversar</p>
+        <h2>Entre em contato</h2>
+        <p>Para entrar em contato, utilize meu e-mail profissional ou acesse meu perfil no GitHub.</p>
+        <!-- Substitua o endereço de exemplo pelo seu e-mail antes de publicar. -->
+        <div class="actions">
+          <a class="button primary" href="mailto:iarleyalves1200@gmail.com">Enviar e-mail</a>
+          <a class="button secondary" href="https://github.com/Iarley123" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+        <p class="small-note">Lembre-se de atualizar os links de contato com seus dados.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> José Iarley · Portfólio profissional</footer>
+</body>
+</html>
